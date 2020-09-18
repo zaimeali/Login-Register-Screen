@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Button } from 'react-native'
+import { View, Text, Button, TouchableOpacity } from 'react-native'
 
 export default function RegisterComponent({ navigation }) {
     return (
@@ -9,6 +9,9 @@ export default function RegisterComponent({ navigation }) {
                 title="Login"
                 onPress={ () => navigation.navigate('Login') }
             />
+            <TouchableOpacity>
+                <Text>Nice</Text>
+            </TouchableOpacity>
         </View>
     )
 }

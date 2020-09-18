@@ -1,14 +1,6 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
 
-// Components
+// Navigation
 import RootStack from './src/RootStack';
 
 const App = () => {

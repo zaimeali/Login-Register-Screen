@@ -1,13 +1,12 @@
 import React from 'react'
-import { View, Text } from 'react-native'
 
 // Navigation
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
 
-// Components
-import LoginComponent from './components/LoginComponent'
-import RegisterComponent from './components/RegisterComponent';
+// Screens
+import LoginComponent from './screen/LoginComponent'
+import RegisterComponent from './screen/RegisterComponent';
 
 
 const Stack = createStackNavigator()
