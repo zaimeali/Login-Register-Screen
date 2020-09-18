@@ -13,9 +13,7 @@ import RootStack from './src/RootStack';
 
 const App = () => {
   return (
-        <View>
-            <Text>Nice</Text>
-        </View>
+    <RootStack />
   );
 };
 
