@@ -28,9 +28,14 @@ export const styles = StyleSheet.create({
     inputFields: {
         color: "#f3f3f3",
         height: 40, 
-        borderColor: '#f3f3f3', 
         borderBottomWidth: 1.2,
         marginBottom: 20,
+    },
+    onFocusField: {
+        borderColor: '#d93b3b', 
+    },
+    onBlurField: {
+        borderColor: '#f3f3f3', 
     },
     inputFieldView: {
         paddingTop: 50,
@@ -50,8 +55,8 @@ export const styles = StyleSheet.create({
     },
     btn: {
         backgroundColor: "#d93b3b",
-        width: 80,
-        height: 80,
+        width: 70,
+        height: 70,
         justifyContent: "center",
         alignItems: "center",
         borderRadius: 50,
