@@ -1,1 +1,1 @@
-![Sign In Screen](/assets/screenshots/SS1.png =100x20)
+<img src="./assets/screenshots/SS1.png" alt="Sign In Screen" width="200"/>
