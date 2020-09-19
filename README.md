@@ -1,1 +1,1 @@
-![Sign In Screen](/assets/screenshots/SS1.png)
+![Sign In Screen](/assets/screenshots/SS1.png =100x20)
