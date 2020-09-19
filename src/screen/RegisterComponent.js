@@ -32,9 +32,7 @@ export default function RegisterComponent({ navigation }) {
         if(username.length && email.length && password.length){
             Alert.alert(
                 alertTitle,
-                `Username: ${username}\n
-                 Email: ${email}\n
-                 Password: ${password}`,
+                `Username: ${username}\nEmail: ${email}\nPassword: ${password}`,
             );
             resetFields();
         }
