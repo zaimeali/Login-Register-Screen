@@ -47,6 +47,12 @@ export const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
     },
+    buttonRegisterDesignView: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-end",
+        alignItems: "center",
+    },
     specialBtn: {
         
     },

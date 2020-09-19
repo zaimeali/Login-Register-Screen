@@ -18,6 +18,8 @@ export default function LoginComponent({ navigation }) {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
+    let alertTitle = "Login Data"
+
     function resetFields() {
         setUsername("");
         setPassword("");
@@ -26,26 +28,26 @@ export default function LoginComponent({ navigation }) {
     function onSubmit() {
         if(username.length && password.length){
             Alert.alert(
-                "Login Data",
+                alertTitle,
                 `Username: ${username}\nPassword: ${password}`,
             );
             resetFields();
         }
         else if(username.length === 0 && password.length > 0) {
             Alert.alert(
-                "Login Data",
+                alertTitle,
                 `You forgot to enter Username`,
             );
         }
         else if(username.length > 0 && password.length === 0) {
             Alert.alert(
-                "Login Data",
+                alertTitle,
                 `You forgot to enter Password`,
             );
         }
         else {
             Alert.alert(
-                "Login Data",
+                alertTitle,
                 `You forgot both fields to Enter`,
             );
         }
