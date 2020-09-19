@@ -18,12 +18,18 @@ export default function LoginComponent({ navigation }) {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
+    function resetFields() {
+        setUsername("");
+        setPassword("");
+    }
+
     function onSubmit() {
         if(username.length && password.length){
             Alert.alert(
                 "Login Data",
                 `Username: ${username}\nPassword: ${password}`,
             );
+            resetFields();
         }
         else if(username.length === 0 && password.length > 0) {
             Alert.alert(
@@ -45,6 +51,14 @@ export default function LoginComponent({ navigation }) {
         }
     }
 
+    function onForgot() {
+        Alert.alert(
+            "Login Screen",
+            "Why you forgot your password? 🤦"
+        );
+        resetFields();
+    }
+
     return (
         <SafeAreaView style={ styles.container }>
             <View style={ styles.layoutTop }>
@@ -53,14 +67,19 @@ export default function LoginComponent({ navigation }) {
                     <FieldComponent 
                         changeContent={ setUsername } 
                         placeholderText="Username" 
-                        isPassword={ false } />
+                        isPassword={ false }
+                        value={ username } />
                     <FieldComponent 
                         changeContent={ setPassword } 
                         placeholderText="Password" 
-                        isPassword={ true } />
+                        isPassword={ true }
+                        value={ password } />
                 </View>
                 <View style={ styles.buttonDesignView }>
-                    <TouchableOpacity style={ styles.specialBtn }>
+                    <TouchableOpacity 
+                        style={ styles.specialBtn }
+                        onPress={ onForgot }
+                    >
                         <Text style={ styles.specialBtnText }>Forgot Password?</Text>
                     </TouchableOpacity>
                     <TouchableOpacity 
@@ -68,7 +87,6 @@ export default function LoginComponent({ navigation }) {
                         onPress={ onSubmit }
                     >
                         <Icon name="arrow-right" size={18} color="#fff" />
-                        
                     </TouchableOpacity>
                 </View> 
             </View>

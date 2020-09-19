@@ -4,7 +4,7 @@ import { TextInput } from 'react-native'
 // Style
 import { styles } from "../styles/screenStyle";
 
-export default function FieldComponent({ changeContent, placeholderText, isPassword }) {
+export default function FieldComponent({ value, changeContent, placeholderText, isPassword }) {
 
     const [borderColor, setBorderColor] = useState(styles.onBlurField);
 
@@ -28,6 +28,7 @@ export default function FieldComponent({ changeContent, placeholderText, isPassw
             placeholder={ placeholderText }
             placeholderTextColor="#ab7473"
             secureTextEntry={ isPassword }
+            value={ value }
             onChangeText={ (e) => handleChange(e) }
         />
     )
